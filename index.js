@@ -1,16 +1,15 @@
-class Hello extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello Universe!</h1>
-        <h1>Hello Universe!</h1>
-        <h1>Hello Universe!</h1>
+        <Hello />
+        <NumPicker />
       </div>
     );
   }
 }
 
-// ReactDOM.render(<Hello />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 function getMood() {
   const moods = ['Angry', 'Hungry', 'Silly', 'Quiet', 'Paranoid'];
@@ -31,21 +30,4 @@ class JSXDEMO extends React.Component {
 
 //ReactDOM.render(<JSXDEMO />, document.getElementById('root'));
 
-function getNum() {
-  return Math.floor(Math.random() * 10) + 1;
-}
-
-class NumPicker extends React.Component {
-  render() {
-    const num = getNum();
-    return (
-      <div>
-        <h1>Your number is {num}</h1>
-        <p>{ num === 7 ? 'You got my lucky number!': 'Your number is not so lucky!'} </p>
-        
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<NumPicker />, document.getElementById('root'));
+//ReactDOM.render(<NumPicker />, document.getElementById('root'));
