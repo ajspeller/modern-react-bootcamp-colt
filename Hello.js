@@ -1,4 +1,8 @@
 class Hello extends React.Component {
+  static defaultProps = {
+    from: 'Anonymous',
+    bangs: 1
+  };
   render() {
     console.log(this.props);
     const { to, from, img } = this.props;
